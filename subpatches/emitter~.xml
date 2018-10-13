@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="C:\GIT\edgy\mars_katharina-master\subpatches\emitter.v4p" systemname="emitter" filename="C:\Users\Achim\Documents\GIT\mars_katharina\subpatches\emitter.v4p" scrollx="4870" scrolly="1010">
+   <PATCH nodename="C:\GIT\edgy\subpatches\emitter.v4p" systemname="emitter" filename="C:\Users\Achim\Documents\GIT\mars_katharina\subpatches\emitter.v4p" scrollx="4870" scrolly="4220">
    <NODE id="0" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
@@ -22,7 +22,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="2120" top="2240" width="12060" height="9190">
+   <BOUNDS type="Window" left="0" top="2540" width="10530" height="7940">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -258,28 +258,6 @@
    </LINK>
    <LINK srcnodeid="35" srcpinname="Output" dstnodeid="260" dstpinname="Resolution">
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="270">
-   <BOUNDS type="Node" left="8130" top="6405" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="timeliner_REC_peffects">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="271">
-   <BOUNDS type="Node" left="8115" top="6825" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="270" srcpinname="Input Value" dstnodeid="271" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="271" srcpinname="Output" dstnodeid="261" dstpinname="freeze">
-   </LINK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
    </PACK>
    <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="286">
@@ -287,9 +265,9 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Scale XYZ" slicecount="3" values="1,1,1" visible="1">
+   <PIN pinname="Scale XYZ" slicecount="3" visible="1" values="1,1,1">
    </PIN>
-   <PIN pinname="Translate XYZ" slicecount="3" values="-0.01,-0.01,-0.01" visible="1">
+   <PIN pinname="Translate XYZ" slicecount="3" visible="1" values="-0.01,-0.01,-0.01">
    </PIN>
    </NODE>
    <LINK srcnodeid="286" srcpinname="Transform Out" dstnodeid="261" dstpinname="Transform In">
@@ -355,7 +333,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7550" top="2070" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-0.35,0.37,-1.01">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-0.27,0.31,-0.84">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -385,7 +363,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="2">
+   <PIN pinname="Input 2" slicecount="1" values="10">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -455,7 +433,33 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="300" srcpinname="Y Output Value" dstnodeid="286" dstpinname="Scale XYZ">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="301">
+   <BOUNDS type="Box" left="9360" top="6380" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9360" top="6380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="RGB">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="301" srcpinname="Output Node" dstnodeid="261" dstpinname="RGB">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="302">
+   <BOUNDS type="Node" left="8580" top="3410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="0.57">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="300" srcpinname="Y Output Value" dstnodeid="302" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="286" dstpinname="Scale XYZ">
    </LINK>
    </PATCH>

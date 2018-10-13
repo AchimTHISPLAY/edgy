@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="C:\GIT\edgy\mars_katharina-master\modules\Emitter (DX11.Particles.Emitter KinectMultipleIDs).v4p" systemname="EmitterSimple (DX11.Mcps.Emitter)" filename="D:\workspace\dev\git\dx11-mcps\packs\dx11.mcps\nodes\modules\emitters\EmitterSimple (DX11.Mcps.Emitter).v4p" scrollx="10" scrolly="50">
+   <PATCH nodename="C:\GIT\edgy\mars_katharina-master\modules\Emitter (DX11.Particles.Emitter KinectMultipleIDs).v4p" systemname="EmitterSimple (DX11.Mcps.Emitter)" filename="D:\workspace\dev\git\dx11-mcps\packs\dx11.mcps\nodes\modules\emitters\EmitterSimple (DX11.Mcps.Emitter).v4p" scrollx="0" scrolly="50">
    <BOUNDS type="Window" left="2730" top="1990" width="13260" height="8910">
    </BOUNDS>
    <PACK Name="addonpack" Version="36.0.0">
@@ -472,8 +472,6 @@
    </LINK>
    <LINK srcnodeid="118" srcpinname="Y Output Value" dstnodeid="216" dstpinname="useRawData">
    </LINK>
-   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="216" dstpinname="EmitterSize">
-   </LINK>
    <LINK srcnodeid="212" srcpinname="Geometry Out" dstnodeid="216" dstpinname="Geometry">
    </LINK>
    <LINK srcnodeid="216" srcpinname="Layer" dstnodeid="211" dstpinname="Layer 1">
@@ -599,5 +597,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="224" srcpinname="Y Output Value" dstnodeid="216" dstpinname="EmitCount">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="227">
+   <BOUNDS type="Box" left="3940" top="1450" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3940" top="1450" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="76800">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="EmitterSize">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="227" srcpinname="Y Output Value" dstnodeid="216" dstpinname="EmitterSize">
    </LINK>
    </PATCH>

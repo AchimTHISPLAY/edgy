@@ -159,6 +159,7 @@ float4 PS(VSOut In): SV_Target
 	uint i = 0;
 	i = In.emitterIndex;
 	
+	/*
 	switch( i ) {
 		case 0 : col = ColorBuffer[i]; break;
 		case 1 : col = ColorBuffer[i]; break;
@@ -168,6 +169,7 @@ float4 PS(VSOut In): SV_Target
 		case 4 : break;
 		default : col = col; break;		
 	}
+	*/
 		
 	
 	col *= texture2d.Sample( sL, In.TexCd.xy);

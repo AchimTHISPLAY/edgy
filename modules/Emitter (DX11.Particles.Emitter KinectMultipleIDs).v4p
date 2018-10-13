@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="C:\GIT\edgy\mars_katharina-master\modules\Emitter (DX11.Particles.Emitter KinectMultipleIDs).v4p" systemname="EmitterSimple (DX11.Mcps.Emitter)" filename="D:\workspace\dev\git\dx11-mcps\packs\dx11.mcps\nodes\modules\emitters\EmitterSimple (DX11.Mcps.Emitter).v4p" scrollx="0" scrolly="50">
+   <PATCH nodename="C:\GIT\edgy\modules\Emitter (DX11.Particles.Emitter KinectMultipleIDs).v4p" systemname="EmitterSimple (DX11.Mcps.Emitter)" filename="D:\workspace\dev\git\dx11-mcps\packs\dx11.mcps\nodes\modules\emitters\EmitterSimple (DX11.Mcps.Emitter).v4p" scrollx="0" scrolly="1270">
    <BOUNDS type="Window" left="2730" top="1990" width="13260" height="8910">
    </BOUNDS>
    <PACK Name="addonpack" Version="36.0.0">

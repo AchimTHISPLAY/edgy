@@ -24,6 +24,8 @@ Texture2D texRGB <string uiname="RGB";>;
 Texture2D texRGBDepth <string uiname="RGBDepth";>;
 Texture2D texWorld <string uiname="World";>;
 
+
+
 cbuffer cbuf
 {
 	uint EmitCount = 0;
