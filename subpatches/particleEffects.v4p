@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="C:\GIT\edgy\subpatches\particleEffects.v4p" systemname="particleEffects" filename="C:\Users\Achim\Documents\GIT\mars_katharina\subpatches\particleEffects.v4p" scrollx="1870" scrolly="1010">
+   <PATCH nodename="C:\GIT\edgy\subpatches\particleEffects.v4p" systemname="particleEffects" filename="C:\Users\Achim\Documents\GIT\mars_katharina\subpatches\particleEffects.v4p" scrollx="2740" scrolly="200">
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1325" top="4090" width="100" height="100">
    </BOUNDS>
@@ -52,7 +52,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Enabled">
    </LINK>
-   <BOUNDS type="Window" left="650" top="1160" width="10530" height="7940">
+   <BOUNDS type="Window" left="1410" top="1190" width="10530" height="7940">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -143,7 +143,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4980" top="3560" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.5,0.5,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.25,0.25,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -155,9 +155,9 @@
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="29" dstpinname="DataXYZ">
-   </LINK>
    <LINK srcnodeid="30" srcpinname="Layer" dstnodeid="13" dstpinname="Layer 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32">
@@ -165,7 +165,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7130" top="4440" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -177,7 +177,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Enabled">
@@ -187,7 +187,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8870" top="5470" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.52">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.75">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -203,7 +203,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8735" top="4870" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.58">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.54">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -229,7 +229,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8270" top="2110" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.90992,0.00000,0.24074,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.83605,0.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color0">
    </PIN>
@@ -255,7 +255,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8390" top="3010" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.35973,0.88490,0.00000,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.93121,0.00000,0.08837,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color1">
    </PIN>
@@ -277,7 +277,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8540" top="3940" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.19417,0.00000,0.88324,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.04364,0.02233,0.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color2">
    </PIN>
@@ -337,7 +337,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1410" top="3670" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.58">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -361,5 +361,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="44" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Frequency">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45">
+   <BOUNDS type="Box" left="5260" top="2490" width="800" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5260" top="2490" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="DataXYZ">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="29" dstpinname="DataXYZ">
    </LINK>
    </PATCH>
