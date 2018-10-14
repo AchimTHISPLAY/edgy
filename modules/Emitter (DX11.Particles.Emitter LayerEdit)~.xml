@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="C:\GIT\edgy\modules\Emitter (DX11.Particles.Emitter LayerEdit).v4p" systemname="Emitter (DX11.Particles.Emitter LayerEdit)" filename="C:\GIT\edgy\modules\Emitter (DX11.Particles.Emitter LayerEdit).v4p" scrollx="2660" scrolly="20">
-   <BOUNDS type="Window" left="1410" top="1190" width="10530" height="7940">
+   <PATCH nodename="C:\GIT\edgy\modules\Emitter (DX11.Particles.Emitter LayerEdit).v4p" systemname="Emitter (DX11.Particles.Emitter LayerEdit)" filename="C:\GIT\edgy\modules\Emitter (DX11.Particles.Emitter LayerEdit).v4p" scrollx="1290" scrolly="-360">
+   <BOUNDS type="Window" left="1410" top="2590" width="10530" height="6540">
    </BOUNDS>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
@@ -174,12 +174,6 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="217088">
    </PIN>
    </NODE>
-   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="194" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="4740" y="4958">
-   </LINKPOINT>
-   <LINKPOINT x="2805" y="4958">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="Register (DX11.Particles.Core Emitter)" filename="%VVVV%\packs\dx11.particles\nodes\plugins\DX11.Particles.Core\x64\DX11.Particles.Core.dll" nodename="Register (DX11.Particles.Core Emitter)" componentmode="Hidden" id="93">
    <BOUNDS type="Node" left="7440" top="7635" width="100" height="100">
    </BOUNDS>
@@ -213,12 +207,6 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="115" srcpinname="Output String" dstnodeid="93" dstpinname="Defines">
-   </LINK>
-   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="93" dstpinname="EmitCount" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="4800" y="4958">
-   </LINKPOINT>
-   <LINKPOINT x="7965" y="4958">
-   </LINKPOINT>
    </LINK>
    <NODE id="208" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Layer In|">
@@ -598,18 +586,6 @@
    <PIN pinname="Defines" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="228" dstpinname="Emitter Size" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="4725" y="3598">
-   </LINKPOINT>
-   <LINKPOINT x="1935" y="3348">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="228" dstpinname="Emit Count" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="4725" y="3598">
-   </LINKPOINT>
-   <LINKPOINT x="2145" y="3348">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="193" srcpinname="Y Output Value" dstnodeid="228" dstpinname="Group Size">
    </LINK>
    <LINK srcnodeid="109" srcpinname="Output String" dstnodeid="228" dstpinname="Emitter Name" linkstyle="Bezier" hiddenwhenlocked="1">
@@ -705,9 +681,9 @@
    <LINK srcnodeid="237" srcpinname="Y Output Value" dstnodeid="221" dstpinname="EmitCount">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="238">
-   <BOUNDS type="Box" left="3810" top="5280" width="800" height="240">
+   <BOUNDS type="Box" left="3560" top="2390" width="800" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3810" top="5280" width="0" height="0">
+   <BOUNDS type="Node" left="3560" top="2390" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="160000">
    </PIN>
@@ -719,6 +695,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="EmitterSize">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="238" srcpinname="Y Output Value" dstnodeid="221" dstpinname="EmitterSize">
    </LINK>
@@ -727,7 +705,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10750" top="3850" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -737,6 +715,8 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
    </NODE>
    <LINK srcnodeid="239" srcpinname="Y Output Value" dstnodeid="229" dstpinname="Enabled">
    </LINK>
@@ -745,7 +725,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9720" top="5570" width="4000" height="3000">
    </BOUNDS>
-   <BOUNDS type="Window" left="10970" top="470" width="4220" height="3560">
+   <BOUNDS type="Window" left="13340" top="240" width="2900" height="2370">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -753,5 +733,13 @@
    <LINK srcnodeid="229" srcpinname="Texture Out" dstnodeid="240" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="120" srcpinname="Y Output Value" dstnodeid="229" dstpinname="Default SizeXY">
+   </LINK>
+   <LINK srcnodeid="238" srcpinname="Y Output Value" dstnodeid="194" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="238" srcpinname="Y Output Value" dstnodeid="228" dstpinname="Emitter Size">
+   </LINK>
+   <LINK srcnodeid="238" srcpinname="Y Output Value" dstnodeid="228" dstpinname="Emit Count">
+   </LINK>
+   <LINK srcnodeid="238" srcpinname="Y Output Value" dstnodeid="93" dstpinname="EmitCount">
    </LINK>
    </PATCH>

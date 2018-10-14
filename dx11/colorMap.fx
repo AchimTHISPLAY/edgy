@@ -82,6 +82,7 @@ float4 PS(vs2ps In): SV_Target
 	{
 		final = float4(0,0,0,0);
 	}
+	
 	return final;
 }
 
