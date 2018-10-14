@@ -71,14 +71,14 @@ VSOut VS(VSIn In)
 	Out.PosW = mul(p, tW);
     Out.PosWVP = mul(Out.PosW, tVP);
 
-	float3 size = 0.001f;
+	float3 size = 0.1f;
 	
 	#if defined(KNOW_SCALE)
             size *= ParticleBuffer[particleIndex].scale;
     #endif
 
 
-	
+	/*
 	switch( i ) {
 		case 0 : size = ScaleBuffer[i]; break;
 		case 1 : size = ScaleBuffer[i]; break;
@@ -87,7 +87,7 @@ VSOut VS(VSIn In)
 		case 4 : size = ScaleBuffer[i]; break;
 		default : size = 0.001f; break;
 	}
-	
+	*/
 	
 	Out.Size = size;	
     return Out;
