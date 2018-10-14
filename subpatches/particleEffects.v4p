@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="C:\GIT\edgy\subpatches\particleEffects.v4p" systemname="particleEffects" filename="C:\Users\Achim\Documents\GIT\mars_katharina\subpatches\particleEffects.v4p" scrollx="8630" scrolly="2280">
+   <PATCH nodename="C:\GIT\edgy\subpatches\particleEffects.v4p" systemname="particleEffects" filename="C:\Users\Achim\Documents\GIT\mars_katharina\subpatches\particleEffects.v4p" scrollx="1240" scrolly="1830">
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1325" top="4090" width="100" height="100">
    </BOUNDS>
@@ -26,6 +26,8 @@
    <PIN pinname="Enabled" visible="1">
    </PIN>
    <PIN pinname="Frequency" slicecount="1" visible="1" values="3">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" visible="1" values="0.65">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
@@ -61,9 +63,9 @@
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="4915" top="7830" width="100" height="100">
+   <BOUNDS type="Node" left="7425" top="10550" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4915" top="7830" width="3000" height="3000">
+   <BOUNDS type="Box" left="7425" top="10550" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
@@ -79,15 +81,19 @@
    </PIN>
    <PIN pinname="Layer 5" visible="1">
    </PIN>
-   <PIN pinname="Layer 9" visible="1">
+   <PIN pinname="Layer 9" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1">
+   </PIN>
+   <PIN pinname="Layer 8" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="13" dstpinname="Layer 1">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="14">
-   <BOUNDS type="Box" left="4840" top="9045" width="795" height="240">
+   <BOUNDS type="Box" left="7350" top="11765" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4840" top="9045" width="0" height="0">
+   <BOUNDS type="Node" left="7350" top="11765" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
    </PIN>
@@ -101,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5505" top="4895" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Set">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Add">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Technique">
    </PIN>
@@ -171,7 +177,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7130" top="4440" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -345,7 +351,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1410" top="3670" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.01">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -359,7 +365,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3310" top="3550" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.98">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -419,9 +425,11 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" values="0.5">
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.09" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="48" dstpinname="Input">
@@ -433,7 +441,7 @@
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="-0.19">
+   <PIN pinname="Z" slicecount="1" values="-0.05">
    </PIN>
    </NODE>
    <NODE systemname="Heading (DX11.Particles.Modifiers)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Modifiers\Heading (DX11.Particles.Modifiers).v4p" nodename="Heading (DX11.Particles.Modifiers)" componentmode="Hidden" id="50">
@@ -513,7 +521,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12415" top="5765" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.73">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.95">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -572,6 +580,8 @@
    <PIN pinname="Growth End" visible="1">
    </PIN>
    <PIN pinname="ParticleSystem" slicecount="1" values="ALLFORONE">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Buffer" dstnodeid="53" dstpinname="Position Buffer">
@@ -724,8 +734,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="65" srcpinname="Layer" dstnodeid="13" dstpinname="Layer 9">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="66">
    <BOUNDS type="Box" left="15910" top="5690" width="480" height="480">
    </BOUNDS>
@@ -745,5 +753,133 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Layer" dstnodeid="13" dstpinname="Layer 6">
+   </LINK>
+   <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="80">
+   <BOUNDS type="Node" left="2530" top="4620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Position In" slicecount="1" values="0.03">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="80" srcpinname="Position Out" dstnodeid="1" dstpinname="Time">
+   </LINK>
+   <NODE systemname="Attractor (DX11.Particles.Modifiers Vector3D)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Modifiers\Attractor (DX11.Particles.Modifiers Vector3D).v4p" nodename="Attractor (DX11.Particles.Modifiers Vector3D)" componentmode="Hidden" id="81">
+   <BOUNDS type="Node" left="14890" top="9260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="ParticleSystem" slicecount="1" values="ALLFORONE">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="15.12">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Power" slicecount="1" values="0.01">
+   </PIN>
+   <PIN pinname="Help Layer" visible="1">
+   </PIN>
+   <PIN pinname="Strength" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="81" srcpinname="Layer" dstnodeid="13" dstpinname="Layer 8">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="82">
+   <BOUNDS type="Box" left="16440" top="8530" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16440" top="8530" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Enabled">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="83">
+   <BOUNDS type="Box" left="15010" top="8350" width="800" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15010" top="8350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,10.13,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="81" dstpinname="PositionXYZ">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="84">
+   <BOUNDS type="Box" left="15660" top="9820" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15660" top="9820" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Help Layer|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="81" srcpinname="Help Layer" dstnodeid="84" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="85">
+   <BOUNDS type="Box" left="7070" top="1750" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7070" top="1750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.23">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Destination Minimum">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="86">
+   <BOUNDS type="Box" left="7490" top="1350" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7490" top="1350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="86" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Destination Maximum">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="87">
+   <BOUNDS type="Box" left="13560" top="4930" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13560" top="4930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="53" dstpinname="Enabled">
    </LINK>
    </PATCH>
