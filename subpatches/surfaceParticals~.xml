@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="C:\GIT\edgy\subpatches\surfaceParticals.v4p" scrollx="550" scrolly="6320" systemname="surfaceParticals" filename="C:\GIT\edgy\subpatches\surfaceParticals.v4p">
+   <PATCH nodename="C:\GIT\edgy\subpatches\surfaceParticals.v4p" scrollx="0" scrolly="1860" systemname="surfaceParticals" filename="C:\GIT\edgy\subpatches\surfaceParticals.v4p">
    <NODE systemname="ParticleSystem (DX11.Particles.Core)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Core\ParticleSystem (DX11.Particles.Core).v4p" nodename="ParticleSystem (DX11.Particles.Core)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4940" top="9460" width="1995" height="270">
    </BOUNDS>
@@ -403,7 +403,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="SizeXYZ" slicecount="3" values="0.14,0.14,0.14">
+   <PIN pinname="SizeXYZ" slicecount="3" values="0.08,0.08,0.08">
    </PIN>
    </NODE>
    <NODE systemname="Constant (DX11.Particles.Effect)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Effects\Constant (DX11.Particles.Effect).v4p" nodename="Constant (DX11.Particles.Effect)" componentmode="Hidden" id="28">
@@ -1152,6 +1152,8 @@
    </LINK>
    <LINK srcnodeid="95" srcpinname="Output Node" dstnodeid="8" dstpinname="Layer 2">
    </LINK>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="23" dstpinname="Input Node">
+   </LINK>
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="73" dstpinname="DataXYZ">
    </LINK>
    <NODE systemname="FrameDifference (Animation)" nodename="FrameDifference (Animation)" componentmode="Hidden" id="100">
@@ -1281,7 +1283,5 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="108" srcpinname="Output Node" dstnodeid="11" dstpinname="Control">
-   </LINK>
-   <LINK srcnodeid="28" srcpinname="Layer" dstnodeid="23" dstpinname="Input Node">
    </LINK>
    </PATCH>
